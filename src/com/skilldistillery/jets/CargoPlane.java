@@ -8,12 +8,13 @@ public class CargoPlane extends Jet implements CargoCarrier {
 
 	@Override
 	double amountOfTimetoFly(double speed, int range) {
-		return 0;
+		double timeRemaining = (range / speed) * 60;
+		return timeRemaining;
 	}
 	
 	@Override
 	public void loadCargo() {
-		
+		System.out.println(this.getModel() + ": Is loading cargo dictated by manifest.");
 	}
 	
 }

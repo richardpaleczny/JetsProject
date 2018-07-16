@@ -8,12 +8,13 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	double amountOfTimetoFly(double speed, int range) {
-		return 0;
+		double timeRemaining = (range / speed) * 100;
+		return timeRemaining;
 	}
 
 	@Override
 	public void fight() {
-		
+		System.out.println(this.getModel() + ": Is pursuing nearby enemy planes. *pewpewpew*");
 	}
 
 }

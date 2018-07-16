@@ -50,12 +50,21 @@ public abstract class Jet {
 	// Other methods
 	public void fly() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("\n---------------\n").append("| Jet Details |").append("\n---------------")
-		.append("\nModel: ").append(model)
+		sb.append("\nModel: ").append(model)
 		.append("\nSpeed: ").append(speed)
 		.append("\nRange: ").append(range)
 		.append("\nPrice: ").append(price)
-		.append("\nAmount of time jet can remain flying (based on fuel): " + amountOfTimetoFly(speed, range));
+		.append("\nAmount of time jet can remain flying (minutes, based on fuel): " + amountOfTimetoFly(speed, range));
+		
+		System.out.println(sb.toString());
+	}
+	
+	public void ListFleet() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("\nModel: ").append(model)
+		.append("\nSpeed: ").append(speed)
+		.append("\nRange: ").append(range)
+		.append("\nPrice: ").append(price);
 		
 		System.out.println(sb.toString());
 	}
